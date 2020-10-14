@@ -1,20 +1,29 @@
-// Diablo.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
-#include <iostream>
+#include "Diablo.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	int strength = 5;
+	int dexterity = 5;
+	int endurance = 5;
+
+	Player player(strength, dexterity, endurance);
+
+	Room room;
+
+	for (size_t i = 0; i < room.GetEnemies().size(); i++)
+	{
+		std::cout << "Enemy #" << i + 1 << ")\n";
+		room.GetEnemies()[i].PrintStats();
+	}
+
+	//player.PrintStats();
+
+	system("pause");
+
+	Dungeon newDungeon;
+
+	for (size_t i = 0; i < newDungeon.GetRooms().size(); i++)
+	{
+		std::cout << "Room #" << i+1 << ") " << newDungeon.GetRooms()[i].GetCleared() << "\n";
+	}
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
