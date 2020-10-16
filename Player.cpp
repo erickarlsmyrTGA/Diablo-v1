@@ -67,12 +67,12 @@ int Player::GetInitiative()
 
 void Player::PrintStats()
 {
-	std::cout << "Strength: "			<< GetStrength() << "\n";
-	std::cout << "Dexterity: "			<< GetDexterity() << "\n";
-	std::cout << "Endurance: "			<< GetEndurance() << "\n";
-	std::cout << "Attack: "				<< GetAttack() << "\n";
-	std::cout << "Max HP: "				<< GetMaxHP() << "\n";
-	std::cout << "Carrying Capacity: "	<< GetCarryingCapacity() << "\n";
-	std::cout << "Defence: "			<< GetDefence() << "\n";
-	std::cout << "Initiative: "			<< GetInitiative() << "\n";
+	std::cout << "[STR] " << GetStrength() << "\n";
+	std::cout << "[DEX] " << GetDexterity() << "\n";
+	std::cout << "[END] " << GetEndurance() << "\n";
+	std::cout << "[ATT] " << GetAttack() << "\n";
+	std::cout << "[MHP] " << GetMaxHP() << "\n";
+	std::cout << "[CAR] " << GetCarryingCapacity() << "\n";
+	std::cout << "[DEF] " << GetDefence() << "\n";
+	std::cout << "[INI] " << GetInitiative() << "\n\n";
 }

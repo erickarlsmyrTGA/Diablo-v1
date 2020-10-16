@@ -6,7 +6,7 @@ Room::Room()
 
 	int enemyCount = Utility::RandomNumberGenerator(1, 10);
 
-	std::cout << enemyCount << " enemies\n";
+	//std::cout << enemyCount << " enemies\n";
 
 	for (int i = 0; i < static_cast<int>(enemyCount); i++)
 	{
@@ -35,6 +35,8 @@ void Room::EnterRoom(Player& player)
 	else
 	{
 		std::cout << "You see " << myEnemies.size() << " enemies in this room\n";
+		Combat combat;
+		combat.Encounter(player, myEnemies);
 	}
 }
 

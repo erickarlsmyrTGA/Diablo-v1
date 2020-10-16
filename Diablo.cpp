@@ -25,6 +25,8 @@ int main()
 
 		Dungeon dungeon;
 
+		std::cout << "You enter a new dungeon\n";
+
 		dungeon.GetRooms()[0].EnterRoom(player);
 
 		system("pause");

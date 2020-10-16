@@ -5,6 +5,7 @@
 #include "Door.h"
 #include "Player.h"
 #include "Enemy.h"
+#include "Combat.h"
 
 class Room
 {

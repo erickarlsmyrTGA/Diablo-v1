@@ -9,6 +9,6 @@ class Combat
 public:
 	Combat();
 	~Combat();
-	void EnterCombat(Player& aPlayer, std::vector<Enemy>& someEnemies);
+	void Encounter(Player& aPlayer, std::vector<Enemy>& someEnemies);
 };
 

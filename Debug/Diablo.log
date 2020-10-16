@@ -1,8 +1,3 @@
-﻿  Diablo.cpp
-  Dungeon.cpp
-E:\Dokument\Visual Studio Projects\Diablo\Diablo\Dungeon.cpp(7,6): warning C4189: 'totalNumberOfDoorsInDungeon': local variable is initialized but not referenced
-  Room.cpp
-E:\Dokument\Visual Studio Projects\Diablo\Diablo\Room.cpp(28,30): warning C4100: 'player': unreferenced formal parameter
-  Utility.cpp
-  Generating Code...
+﻿  Combat.cpp
+E:\Dokument\Visual Studio Projects\Diablo\Diablo\Combat.cpp(13,32): warning C4100: 'aPlayer': unreferenced formal parameter
   Diablo.vcxproj -> E:\Dokument\Visual Studio Projects\Diablo\Debug\Diablo.exe

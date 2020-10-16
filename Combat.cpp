@@ -10,7 +10,13 @@ Combat::~Combat()
 
 }
 
-void Combat::EnterCombat(Player& aPlayer, std::vector<Enemy>& someEnemies)
+void Combat::Encounter(Player& aPlayer, std::vector<Enemy>& someEnemies)
 {
-	std::cout << "Combat!\n";
+	std::cout << "\nCombat!\n\n";
+
+	for (size_t i = 0; i < someEnemies.size(); i++)
+	{
+		std::cout << "Enemy #" << i + 1 << "\n";
+		someEnemies[i].PrintStats();
+	}
 }
