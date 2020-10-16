@@ -27,9 +27,11 @@ int main()
 
 		dungeon.GetRooms()[0].EnterRoom(player);
 
-		for (size_t i = 0; i < dungeon.GetRooms().size(); i++)
+		system("pause");
+
+		/*for (size_t i = 0; i < dungeon.GetRooms().size(); i++)
 		{
 			std::cout << "Room #" << i + 1 << ") Number of enemies: " << dungeon.GetRooms()[i].GetEnemies().size() << "\n";
-		}
+		}*/
 	}
 }

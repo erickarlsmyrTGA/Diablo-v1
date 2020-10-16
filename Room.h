@@ -1,5 +1,7 @@
 #pragma once
+#include <iostream>
 #include <vector>
+#include "Utility.h"
 #include "Door.h"
 #include "Player.h"
 #include "Enemy.h"

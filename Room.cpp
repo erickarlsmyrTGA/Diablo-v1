@@ -1,12 +1,12 @@
-#include <iostream>
-#include "Utility.h"
 #include "Room.h"
 
 Room::Room()
 {
 	myIsCleared = false;
 
-	int enemyCount = Utility::RandomNumberGenerator(1, 1);
+	int enemyCount = Utility::RandomNumberGenerator(1, 10);
+
+	std::cout << enemyCount << " enemies\n";
 
 	for (int i = 0; i < static_cast<int>(enemyCount); i++)
 	{
@@ -34,7 +34,7 @@ void Room::EnterRoom(Player& player)
 	}
 	else
 	{
-		std::cout << "You see " << myEnemies.size() << " enemies\n";
+		std::cout << "You see " << myEnemies.size() << " enemies in this room\n";
 	}
 }
 
