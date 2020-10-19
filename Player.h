@@ -1,4 +1,7 @@
 #pragma once
+#include <iostream>
+#include "Enemy.h"
+
 class Player
 {
 public:
@@ -13,6 +16,8 @@ public:
 	int GetDefence();
 	int GetInitiative();
 	void PrintStats();
+	void Attack(Enemy& anEnemy);
+	void Hurt(int someDamage);
 private:
 	int myStrength;
 	int myDexterity;

@@ -1,4 +1,23 @@
-﻿  Diablo.cpp
-E:\Dokument\Visual Studio Projects\Diablo\Diablo\Diablo.cpp(56,23): warning C4018: '<': signed/unsigned mismatch
-E:\Dokument\Visual Studio Projects\Diablo\Diablo\Diablo.cpp(62,23): warning C4018: '<': signed/unsigned mismatch
-  Diablo.vcxproj -> E:\Dokument\Visual Studio Projects\Diablo\Debug\Diablo.exe
+﻿  Combat.cpp
+E:\Dokument\Visual Studio Projects\Diablo\Diablo\Enemy.h(21,20): error C2061: syntax error: identifier 'Player'
+E:\Dokument\Visual Studio Projects\Diablo\Diablo\Combat.cpp(68,18): warning C4459: declaration of 'enemy' hides global declaration
+E:\Dokument\Visual Studio Projects\Diablo\Diablo\Player.h(5,7): message : see declaration of 'enemy'
+  Diablo.cpp
+E:\Dokument\Visual Studio Projects\Diablo\Diablo\Enemy.h(21,20): error C2061: syntax error: identifier 'Player'
+E:\Dokument\Visual Studio Projects\Diablo\Diablo\Diablo.cpp(31,23): warning C4018: '<': signed/unsigned mismatch
+E:\Dokument\Visual Studio Projects\Diablo\Diablo\Diablo.cpp(37,23): warning C4018: '<': signed/unsigned mismatch
+  Dungeon.cpp
+E:\Dokument\Visual Studio Projects\Diablo\Diablo\Enemy.h(21,20): error C2061: syntax error: identifier 'Player'
+  Enemy.cpp
+E:\Dokument\Visual Studio Projects\Diablo\Diablo\Player.h(5,12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Dokument\Visual Studio Projects\Diablo\Diablo\Player.h(5,7): error C2146: syntax error: missing ';' before identifier 'enemy'
+E:\Dokument\Visual Studio Projects\Diablo\Diablo\Player.h(21,19): error C2061: syntax error: identifier 'Enemy'
+  Player.cpp
+E:\Dokument\Visual Studio Projects\Diablo\Diablo\Enemy.h(21,20): error C2061: syntax error: identifier 'Player'
+  Room.cpp
+E:\Dokument\Visual Studio Projects\Diablo\Diablo\Enemy.h(21,20): error C2061: syntax error: identifier 'Player'
+E:\Dokument\Visual Studio Projects\Diablo\Diablo\Room.cpp(13,14): warning C4459: declaration of 'enemy' hides global declaration
+E:\Dokument\Visual Studio Projects\Diablo\Diablo\Player.h(5,7): message : see declaration of 'enemy'
+  Utility.cpp
+E:\Dokument\Visual Studio Projects\Diablo\Diablo\Enemy.h(21,20): error C2061: syntax error: identifier 'Player'
+  Generating Code...

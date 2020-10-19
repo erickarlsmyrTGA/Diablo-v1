@@ -1,6 +1,4 @@
-#include <iostream>
 #include "Player.h"
-
 
 Player::Player(int& someStr, int& someDex, int& someEnd)
 {
@@ -10,6 +8,16 @@ Player::Player(int& someStr, int& someDex, int& someEnd)
 }
 
 Player::~Player()
+{
+
+}
+
+void Player::Attack(Enemy& anEnemy)
+{
+
+}
+
+void Player::Hurt(int someDamage)
 {
 
 }

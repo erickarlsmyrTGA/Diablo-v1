@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include "Utility.h"
 
 class Door
 {
@@ -12,5 +13,6 @@ public:
 private:
 	Door* myAddress;
 	std::string myName;
+	bool myIsLocked;
 };
 

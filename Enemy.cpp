@@ -1,6 +1,4 @@
-#include <iostream>
 #include "Enemy.h"
-#include "Utility.h"
 
 Enemy::Enemy()
 {
@@ -19,6 +17,16 @@ Enemy::Enemy(int someValueToChangeSignature)
 }
 
 Enemy::~Enemy()
+{
+
+}
+
+void Enemy::Attack(Player& aPlayer)
+{
+
+}
+
+void Enemy::Hurt(int someDamage)
 {
 
 }

@@ -56,6 +56,7 @@ void Room::EnterRoom(Player& aPlayer, std::vector<Room>& someRooms)
 		combat.Encounter(aPlayer, myEnemies);
 	}
 
+	std::cout << "\n";
 	system("pause");
 
 	UseDoor(aPlayer, someRooms);

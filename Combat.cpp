@@ -12,7 +12,7 @@ Combat::~Combat()
 
 void Combat::Encounter(Player& aPlayer, std::vector<Enemy>& someEnemies)
 {
-	std::cout << "\nCombat!\n\n";
+	std::cout << "\n[COMBAT]\n\n";
 
 	SortEnemiesByInitiative(someEnemies);
 
@@ -36,12 +36,13 @@ void Combat::SortEnemiesByInitiative(std::vector<Enemy>& someEnemies)
 void Combat::PrintTurnOrder(Player& aPlayer)
 {
 	bool playerPrinted = false;
-
+	std::cout << "[TURN ORDER]\n\n";
 	for (size_t i = 0; i < myTurnOrder.size(); i++)
 	{
+		std::cout << "[" << (i + 1) << "] ";
 		if (myTurnOrder[i].GetInitiative() == 0)
 		{
-			std::cout << "Player \t\t[INI] " << aPlayer.GetInitiative() << "\n";
+			std::cout << "Player \t[INI] " << aPlayer.GetInitiative() << "\n";
 			playerPrinted = true;
 		}
 		else if (myTurnOrder[i].GetInitiative() != 0)
