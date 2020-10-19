@@ -13,6 +13,13 @@ Enemy::Enemy()
 	myEndurance = Utility::RandomNumberGenerator(1, totalAttributePoints);
 }
 
+Enemy::Enemy(int someValueToChangeSignature)
+{
+	myStrength = 0;
+	myDexterity = 0;
+	myEndurance = 0;
+}
+
 Enemy::~Enemy()
 {
 
@@ -55,17 +62,24 @@ int Enemy::GetDefence()
 
 int Enemy::GetInitiative()
 {
-	if (myStrength > myDexterity)
+	if ((myStrength || myDexterity || myEndurance) != 0)
 	{
-		return myEndurance + (myStrength * myEndurance / myDexterity);
-	}
-	else if (myDexterity > myStrength)
-	{
-		return myEndurance + (myDexterity * myEndurance / myStrength);
+		if (myStrength > myDexterity)
+		{
+			return myEndurance + (myStrength * myEndurance / myDexterity);
+		}
+		else if (myDexterity > myStrength)
+		{
+			return myEndurance + (myDexterity * myEndurance / myStrength);
+		}
+		else
+		{
+			return myEndurance + (myStrength * myEndurance / myStrength);
+		}
 	}
 	else
 	{
-		return myEndurance + (myStrength * myEndurance / myStrength);
+		return 0;
 	}
 }
 

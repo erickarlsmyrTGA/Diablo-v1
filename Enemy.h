@@ -3,6 +3,7 @@ class Enemy
 {
 public:
 	Enemy();
+	Enemy(int someInitiative);
 	~Enemy();
 	int& GetStrength();
 	int& GetDexterity();
