@@ -1,2 +1,4 @@
-﻿  Combat.cpp
+﻿  Diablo.cpp
+E:\Dokument\Visual Studio Projects\Diablo\Diablo\Diablo.cpp(56,23): warning C4018: '<': signed/unsigned mismatch
+E:\Dokument\Visual Studio Projects\Diablo\Diablo\Diablo.cpp(62,23): warning C4018: '<': signed/unsigned mismatch
   Diablo.vcxproj -> E:\Dokument\Visual Studio Projects\Diablo\Debug\Diablo.exe

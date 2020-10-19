@@ -10,15 +10,22 @@
 class Room
 {
 public:
-	Room();
+	Room(int anIndex);
+	Room() = default;
 	~Room();
-	void EnterRoom(Player& player);
+	void EnterRoom(Player& aPlayer, std::vector<Room>& someRooms);
 	bool& GetCleared();
 	std::vector<Enemy>& GetEnemies();
+	std::vector<Door>& GetDoors();
+	std::string& GetRoomName();
+	void AddDoor(Door& aDoor);
 
 private:
 	bool myIsCleared;
-	std::vector<Enemy> myEnemies;
+	std::string myName;
 	std::vector<Door> myDoors;
+	std::vector<Enemy> myEnemies;
+	void PrintName();
+	void UseDoor(Player& aPlayer, std::vector<Room>& someRooms);
 };
 

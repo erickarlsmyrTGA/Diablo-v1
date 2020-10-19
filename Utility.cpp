@@ -1,5 +1,11 @@
 #include "Diablo.h"
 
+void Utility::PrintOnColor(const std::string someText, const int aColor)
+{
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), static_cast<WORD>(aColor));
+	std::cout << someText;
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+}
 
 int Utility::RandomNumberGenerator(int aMin, int aMax)
 {

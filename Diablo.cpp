@@ -1,7 +1,12 @@
 #include "Diablo.h"
 
+void GenerateDungeon(std::vector<Room>& someRooms, int anAmount, std::vector<Door>& someDoors, int anAmountOfDoors);
+
 int main()
 {
+	std::vector<Room> rooms;
+	std::vector<Door> doors;
+
 	bool gameOver = false;
 
 	while (!gameOver)
@@ -12,28 +17,69 @@ int main()
 
 		Player player(strength, dexterity, endurance);
 
-		/*Room room;
+		GenerateDungeon(rooms, 7, doors, 8);
 
-		for (size_t i = 0; i < room.GetEnemies().size(); i++)
+		while (true)
 		{
-			std::cout << "Enemy #" << i + 1 << ")\n";
-			room.GetEnemies()[i].PrintStats();
-		}*/
-
-		//player.PrintStats();
-		//system("pause");
-
-		Dungeon dungeon;
-
-		std::cout << "You enter a new dungeon\n";
-
-		dungeon.GetRooms()[0].EnterRoom(player);
+			rooms[0].EnterRoom(player, rooms);
+		}
 
 		system("pause");
-
-		/*for (size_t i = 0; i < dungeon.GetRooms().size(); i++)
-		{
-			std::cout << "Room #" << i + 1 << ") Number of enemies: " << dungeon.GetRooms()[i].GetEnemies().size() << "\n";
-		}*/
 	}
+}
+
+void GenerateDungeon(std::vector<Room>& someRooms, int anAmountOfRooms, std::vector<Door>& someDoors, int anAmountOfDoors)
+{
+	for (size_t i = 0; i < anAmountOfRooms + 1; i++)
+	{
+		Room room((i + 1));
+		someRooms.push_back(room);
+	}
+
+	for (size_t i = 0; i < anAmountOfDoors + 1; i++)
+	{
+		Door door;
+		someDoors.push_back(door);
+	}
+
+	for (Door& door : someDoors)
+	{
+		door.SetAddress(door);
+	}
+
+	// add the doors to the rooms
+	someRooms[0].AddDoor(someDoors[0]);
+
+	someRooms[1].AddDoor(someDoors[0]);
+	someRooms[1].AddDoor(someDoors[1]);
+	someRooms[1].AddDoor(someDoors[2]);
+	someRooms[1].AddDoor(someDoors[3]);
+
+	someRooms[2].AddDoor(someDoors[1]);
+	someRooms[2].AddDoor(someDoors[5]);
+
+	someRooms[3].AddDoor(someDoors[3]);
+	someRooms[3].AddDoor(someDoors[4]);
+
+	someRooms[4].AddDoor(someDoors[2]);
+
+	someRooms[5].AddDoor(someDoors[4]);
+	someRooms[5].AddDoor(someDoors[6]);
+	someRooms[5].AddDoor(someDoors[7]);
+
+	someRooms[6].AddDoor(someDoors[5]);
+	someRooms[6].AddDoor(someDoors[6]);
+
+	someRooms[7].AddDoor(someDoors[7]);
+
+	/*for (Room& room : someRooms)
+	{
+		std::cout << room.GetRoomName() << "\n";
+		for (Door& door : room.GetDoors())
+		{
+			std::cout << door.GetAddress() << "\n";
+		}
+	}
+
+	system("pause");*/
 }

@@ -67,7 +67,7 @@ int Player::GetInitiative()
 
 void Player::PrintStats()
 {
-	std::cout << "[STR] " << GetStrength() << "\n";
+	std::cout << "\n[STR] " << GetStrength() << "\n";
 	std::cout << "[DEX] " << GetDexterity() << "\n";
 	std::cout << "[END] " << GetEndurance() << "\n";
 	std::cout << "[ATT] " << GetAttack() << "\n";

@@ -4,20 +4,18 @@
 
 Enemy::Enemy()
 {
-	int totalAttributePoints = 14;
+	int maxAttributePoints = 4;
 
-	myStrength = Utility::RandomNumberGenerator(1, totalAttributePoints / 3);
-	totalAttributePoints -= myStrength;
-	myDexterity = Utility::RandomNumberGenerator(1, totalAttributePoints / 2);
-	totalAttributePoints -= myDexterity;
-	myEndurance = Utility::RandomNumberGenerator(1, totalAttributePoints);
+	myStrength = Utility::RandomNumberGenerator(1, maxAttributePoints);
+	myDexterity = Utility::RandomNumberGenerator(1, maxAttributePoints);
+	myEndurance = Utility::RandomNumberGenerator(1, maxAttributePoints);
 }
 
 Enemy::Enemy(int someValueToChangeSignature)
 {
-	myStrength = 0;
-	myDexterity = 0;
-	myEndurance = 0;
+	myStrength = 0 * someValueToChangeSignature;
+	myDexterity = 0 * someValueToChangeSignature;
+	myEndurance = 0 * someValueToChangeSignature;
 }
 
 Enemy::~Enemy()
@@ -85,7 +83,7 @@ int Enemy::GetInitiative()
 
 void Enemy::PrintStats()
 {
-	std::cout << "[STR] " << GetStrength() << "\n";
+	std::cout << "\n[STR] " << GetStrength() << "\n";
 	std::cout << "[DEX] " << GetDexterity() << "\n";
 	std::cout << "[END] " << GetEndurance() << "\n";
 	std::cout << "[ATT] " << GetAttack() << "\n";
